@@ -8,6 +8,7 @@ const sequence = {
 const produtos = {};
 
 function salvarProduto(produto) {
+  console.log(produto.id);
   if (!produto.id) produto.id = sequence.id;
   produtos[produto.id] = produto;
   return produto;
@@ -18,6 +19,7 @@ function getProduto(id) {
 }
 
 function getProdutos() {
+  console.log(produtos);
   return Object.values(produtos);
 }
 
